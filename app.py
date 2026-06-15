@@ -63,10 +63,19 @@ lottie_warning = load_lottieurl("https://lottie.host/4a2db7eb-9878-4389-9a25-c65
 lottie_danger = load_lottieurl("https://lottie.host/1c8f4951-60a6-4dc4-b770-07ceea3db711/wD39vX8J0Q.json")
 
 
-@st.cache_resource
+@st.cache_data(ttl=3600)
+def fetch_live_data():
+    sheet_url = "https://docs.google.com/spreadsheets/d/1ykJtioZB3IrKzYKH5oab1Wf_WnCSQ6e7pLZT8nA1uCY/export?format=csv"
+    try:
+        raw_df = pd.read_csv(sheet_url)
+    except:
+        raw_df = pd.read_csv('data.csv') # Fallback if offline
+    return raw_df
+
+@st.cache_resource(ttl=3600)
 def load_and_fit_encoders():
     # Keep the raw data for dashboard
-    raw_df = pd.read_csv('data.csv')
+    raw_df = fetch_live_data()
     
     dataset = raw_df.copy()
     new_columns = [f"q{i}" for i in range(len(dataset.columns))]
@@ -217,6 +226,30 @@ if page == "📊 Dashboard":
                          color_discrete_map={'Frequently':'#ef4444', 'Occasionally':'#f59e0b', 'Rarely or never':'#10b981'})
         fig_bar.update_layout(margin=dict(t=0, b=0, l=0, r=0))
         st.plotly_chart(fig_bar, use_container_width=True)
+
+    # ==========================================
+    # AI BRAIN FEATURE IMPORTANCE GRAPH
+    # ==========================================
+    st.markdown("<br><hr>", unsafe_allow_html=True)
+    st.subheader("🧠 What the AI Cares About")
+    st.write("Our Shadow Model dynamically learns which questions are the strongest predictors of student stress. Here are the top factors it is currently tracking:")
+    
+    if questions:
+        imp_data = []
+        for q_id, q_data in questions.items():
+            imp_data.append({"Question": q_data["text"], "Importance": q_data.get("importance", 0.0)})
+        
+        df_imp = pd.DataFrame(imp_data)
+        # Filter out 0 importance if any, and sort
+        df_imp = df_imp[df_imp["Importance"] > 0].sort_values(by="Importance", ascending=True)
+        
+        if not df_imp.empty:
+            fig_imp = px.bar(df_imp, x="Importance", y="Question", orientation='h', 
+                             color="Importance", color_continuous_scale="Purples")
+            fig_imp.update_layout(margin=dict(l=0, r=0, t=0, b=0), yaxis_title=None, showlegend=False)
+            st.plotly_chart(fig_imp, use_container_width=True)
+        else:
+            st.info("Feature importance data is currently being calculated by the ML pipeline.")
 
 # ==========================================
 #  PAGE 2: TEST YOURSELF

@@ -158,24 +158,31 @@ print(f"-> Shadow Accuracy (Max Theoretical): {acc_shadow:.2f}")
 # ---------------------------------------------------------
 print("\n=== STEP 4: SELF-UPDATING DEPLOYMENT ===")
 
-def generate_schema(selected_q_ids, raw_dataframe, q_mapping):
+def generate_schema(selected_q_ids, raw_dataframe, q_mapping, scores_dict):
     schema = {}
     for q_id in selected_q_ids:
         text = q_mapping[q_id]
         options = list(raw_dataframe[q_id].unique())
         if "Not Answered" not in options:
             options.append("Not Answered")
-        schema[q_id] = {"text": text, "options": [str(opt) for opt in options]}
+        schema[q_id] = {
+            "text": text, 
+            "options": [str(opt) for opt in options],
+            "importance": float(scores_dict.get(q_id, 0.0))
+        }
     return schema
 
 accuracy_gap = acc_shadow - acc_prod
+
+# Calculate mathematical importance scores for the JSON UI
+all_scores = dict(zip(X_train.columns, mutual_info_classif(X_train, y_train, random_state=42)))
 
 if accuracy_gap > 0.0:  # If Shadow is mathematically superior
     print(f"🚨 UPGRADE TRIGGERED: The Shadow Model is better (+{accuracy_gap:.2f})!")
     print("Automatically generating Version 2.0 of the Streamlit website...")
     
     # Generate and save the new dynamic schema
-    new_schema = generate_schema(shadow_selected_names, raw_df, q_map)
+    new_schema = generate_schema(shadow_selected_names, raw_df, q_map, all_scores)
     with open('questions_schema.json', 'w') as f:
         json.dump(new_schema, f, indent=4)
         
@@ -188,7 +195,7 @@ else:
     
     # Ensure the schema file exists even if no upgrade happened
     if not os.path.exists('questions_schema.json'):
-        init_schema = generate_schema(ui_selected_names, raw_df, q_map)
+        init_schema = generate_schema(ui_selected_names, raw_df, q_map, all_scores)
         with open('questions_schema.json', 'w') as f:
             json.dump(init_schema, f, indent=4)
             
