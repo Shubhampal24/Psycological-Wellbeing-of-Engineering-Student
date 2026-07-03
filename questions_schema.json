@@ -1,23 +1,4 @@
 {
-    "q6": {
-        "text": "Who mainly pays for your college ?",
-        "options": [
-            "Scholarships",
-            "Parents/Gaurdian",
-            "Education Loan",
-            "Part-time job",
-            "Not Answered"
-        ]
-    },
-    "q13": {
-        "text": "Are you passionate about your chosen engineering field?",
-        "options": [
-            "No",
-            "Yes",
-            "Neutral",
-            "Not Answered"
-        ]
-    },
     "q17": {
         "text": "What part of engineering are you most excited about?",
         "options": [
@@ -25,15 +6,8 @@
             "Thinking up new ideas",
             "Learning new things",
             "Not Answered"
-        ]
-    },
-    "q19": {
-        "text": "Would you consider pursuing postgraduate studies in your field?",
-        "options": [
-            "Undecided",
-            "Yes",
-            "Not Answered"
-        ]
+        ],
+        "importance": 0.0
     },
     "q22": {
         "text": "What role do internships or co-op experiences play in your educational and career plans?",
@@ -42,7 +16,8 @@
             "Essential",
             "Not considered",
             "Not Answered"
-        ]
+        ],
+        "importance": 0.007238698190438431
     },
     "q36": {
         "text": "Have you ever considered studying abroad as part of your academic journey?",
@@ -50,7 +25,17 @@
             "Yes",
             "No",
             "Not Answered"
-        ]
+        ],
+        "importance": 0.07152777196056737
+    },
+    "q37": {
+        "text": "Are you involved in any leadership roles or student organizations related to your field?",
+        "options": [
+            "No",
+            "Yes",
+            "Not Answered"
+        ],
+        "importance": 0.059206731270495805
     },
     "q40": {
         "text": " Do you enjoy your engineering coursework?",
@@ -59,16 +44,18 @@
             "Yes, a lot",
             "Notatall",
             "Not Answered"
-        ]
+        ],
+        "importance": 0.040345103561493456
     },
-    "q43": {
-        "text": "How do extracurricular activities contribute to your overall college experience?",
+    "q44": {
+        "text": " What do you do if there's a problem or argument in your group project?",
         "options": [
-            "Significantly",
-            "Minimally",
-            "Moderately",
+            "Pretend like nothing's wrong",
+            "Ask for help from someone else to sort it out",
+            "Talk about it openly",
             "Not Answered"
-        ]
+        ],
+        "importance": 0.002593427751838462
     },
     "q51": {
         "text": "Have you ever felt like you don't belong or aren't good enough in your engineering studies?",
@@ -76,7 +63,17 @@
             "Yes",
             "No",
             "Not Answered"
-        ]
+        ],
+        "importance": 0.052597912933932234
+    },
+    "q53": {
+        "text": "Are there specific academic or personal achievements that have positively impacted your emotional well-being?",
+        "options": [
+            "Yes",
+            "No",
+            "Not Answered"
+        ],
+        "importance": 0.015244674247799184
     },
     "q55": {
         "text": "Have you experienced any fears or concerns about your future career during your engineering studies?",
@@ -84,7 +81,17 @@
             "No",
             "Yes",
             "Not Answered"
-        ]
+        ],
+        "importance": 0.01737831075621199
+    },
+    "q60": {
+        "text": "Have you considered pursuing further education or additional skills outside of engineering to enhance your career flexibility?",
+        "options": [
+            "No",
+            "Yes",
+            "Not Answered"
+        ],
+        "importance": 0.0
     },
     "q61": {
         "text": "How do you perceive the importance of having a backup plan for your career?",
@@ -93,16 +100,17 @@
             "Very important",
             "Not important",
             "Not Answered"
-        ]
+        ],
+        "importance": 0.08308653627130869
     },
-    "q64": {
-        "text": "Can you tell us about what a typical day is like for you? Do you wake up early, stay up late, or have a routine that's in between.",
+    "q67": {
+        "text": " Do you do anything to help yourself feel good mentally?",
         "options": [
-            "Staying up late",
-            "Getting up early",
-            "Having a mix of both",
+            "No",
+            "Yes",
             "Not Answered"
-        ]
+        ],
+        "importance": 0.010729164696243743
     },
     "q68": {
         "text": "How often do you feel like college stuff is too much for you?",
@@ -111,26 +119,29 @@
             "Sometimes",
             "A lot",
             "Not Answered"
-        ]
+        ],
+        "importance": 0.04735190252638577
     },
-    "q70": {
-        "text": "How have you been feeling overall in the last week?",
+    "q72": {
+        "text": " How often do you do things to help yourself relax when you're stressed?",
         "options": [
-            "Okay",
-            "Mostly good",
-            "Really bad",
-            "Mostly bad",
-            "Not Answered"
-        ]
-    },
-    "q73": {
-        "text": "Have you talked to friends or classmates for support with your feelings lately?",
-        "options": [
-            "Hardly ever",
-            "Yes, a lot",
+            "A few times a week",
+            "Every day",
             "Sometimes",
-            "Never",
+            "Rarely or never",
             "Not Answered"
-        ]
+        ],
+        "importance": 0.014737280199438318
+    },
+    "q79": {
+        "text": " If yes, how much time do you dedicate to improving those skills or interests each week?",
+        "options": [
+            "2-5 hours",
+            "More than 10 hours",
+            "5-10 hours",
+            "Less than 2 hours",
+            "Not Answered"
+        ],
+        "importance": 0.09462721805643248
     }
 }
