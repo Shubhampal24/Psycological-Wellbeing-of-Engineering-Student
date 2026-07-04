@@ -1,4 +1,43 @@
 {
+    "q5": {
+        "text": "What is the highest level of education attained by your parents? ",
+        "options": [
+            "Master\u2019s degree or higher",
+            "Bachelor\u2019s degree",
+            "High school",
+            "Not Answered"
+        ],
+        "importance": 0.0
+    },
+    "q7": {
+        "text": "How has your background impacted your college experience?",
+        "options": [
+            "Neutral",
+            "Positively",
+            "Negatively",
+            "Not Answered"
+        ],
+        "importance": 0.054410290381946114
+    },
+    "q8": {
+        "text": "Have you faced any problems related to your background that affected your college performance?",
+        "options": [
+            "Yes",
+            "No",
+            "Not Answered"
+        ],
+        "importance": 0.0
+    },
+    "q16": {
+        "text": "What influenced your decision to study engineering?",
+        "options": [
+            "Family expectations",
+            "Desire for knowledge",
+            "Job opportunities",
+            "Not Answered"
+        ],
+        "importance": 0.0
+    },
     "q17": {
         "text": "What part of engineering are you most excited about?",
         "options": [
@@ -9,53 +48,25 @@
         ],
         "importance": 0.0
     },
-    "q22": {
-        "text": "What role do internships or co-op experiences play in your educational and career plans?",
+    "q20": {
+        "text": "How do you think you'll use what you learn in engineering to help fix things in the real world?",
         "options": [
-            "Helpful but not necessary",
-            "Essential",
-            "Not considered",
+            "Making people healthier",
+            "Creating new inventions",
+            "Helping nature",
             "Not Answered"
         ],
-        "importance": 0.007238698190438431
+        "importance": 0.01685707695424221
     },
-    "q36": {
-        "text": "Have you ever considered studying abroad as part of your academic journey?",
+    "q48": {
+        "text": "How do you cope with stress?",
         "options": [
-            "Yes",
-            "No",
+            "Talking to friends/family",
+            "Ignoring it",
+            "Exercise",
             "Not Answered"
         ],
-        "importance": 0.07152777196056737
-    },
-    "q37": {
-        "text": "Are you involved in any leadership roles or student organizations related to your field?",
-        "options": [
-            "No",
-            "Yes",
-            "Not Answered"
-        ],
-        "importance": 0.059206731270495805
-    },
-    "q40": {
-        "text": " Do you enjoy your engineering coursework?",
-        "options": [
-            "Somewhat",
-            "Yes, a lot",
-            "Notatall",
-            "Not Answered"
-        ],
-        "importance": 0.040345103561493456
-    },
-    "q44": {
-        "text": " What do you do if there's a problem or argument in your group project?",
-        "options": [
-            "Pretend like nothing's wrong",
-            "Ask for help from someone else to sort it out",
-            "Talk about it openly",
-            "Not Answered"
-        ],
-        "importance": 0.002593427751838462
+        "importance": 0.0
     },
     "q51": {
         "text": "Have you ever felt like you don't belong or aren't good enough in your engineering studies?",
@@ -66,15 +77,6 @@
         ],
         "importance": 0.052597912933932234
     },
-    "q53": {
-        "text": "Are there specific academic or personal achievements that have positively impacted your emotional well-being?",
-        "options": [
-            "Yes",
-            "No",
-            "Not Answered"
-        ],
-        "importance": 0.015244674247799184
-    },
     "q55": {
         "text": "Have you experienced any fears or concerns about your future career during your engineering studies?",
         "options": [
@@ -83,15 +85,6 @@
             "Not Answered"
         ],
         "importance": 0.01737831075621199
-    },
-    "q60": {
-        "text": "Have you considered pursuing further education or additional skills outside of engineering to enhance your career flexibility?",
-        "options": [
-            "No",
-            "Yes",
-            "Not Answered"
-        ],
-        "importance": 0.0
     },
     "q61": {
         "text": "How do you perceive the importance of having a backup plan for your career?",
@@ -102,6 +95,16 @@
             "Not Answered"
         ],
         "importance": 0.08308653627130869
+    },
+    "q66": {
+        "text": " How important is taking care of yourself to you every day?",
+        "options": [
+            "Very important",
+            "Sometimes important",
+            "Not very important",
+            "Not Answered"
+        ],
+        "importance": 0.0
     },
     "q67": {
         "text": " Do you do anything to help yourself feel good mentally?",
@@ -133,15 +136,15 @@
         ],
         "importance": 0.014737280199438318
     },
-    "q79": {
-        "text": " If yes, how much time do you dedicate to improving those skills or interests each week?",
+    "q75": {
+        "text": "Do you set specific goals related to your mental well-being?",
         "options": [
-            "2-5 hours",
-            "More than 10 hours",
-            "5-10 hours",
-            "Less than 2 hours",
+            "Occasionally",
+            "Rarely",
+            "Never",
+            "Yes, regularly",
             "Not Answered"
         ],
-        "importance": 0.09462721805643248
+        "importance": 0.0013896064261111896
     }
 }
