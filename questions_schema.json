@@ -1,26 +1,45 @@
 {
-    "q5": {
-        "text": "What is the highest level of education attained by your parents? ",
+    "q4": {
+        "text": "Did you or your family borrow loan for your college?",
         "options": [
-            "Master\u2019s degree or higher",
-            "Bachelor\u2019s degree",
-            "High school",
+            "yes",
+            "no",
             "Not Answered"
         ],
         "importance": 0.0
     },
-    "q7": {
-        "text": "How has your background impacted your college experience?",
+    "q18": {
+        "text": "How do you stay motivated during challenging courses?",
         "options": [
-            "Neutral",
-            "Positively",
-            "Negatively",
+            "Self-motivation",
+            "talking or discussing with friends",
+            "Asking teachers for help",
             "Not Answered"
         ],
-        "importance": 0.054410290381946114
+        "importance": 0.003857584277719317
     },
-    "q8": {
-        "text": "Have you faced any problems related to your background that affected your college performance?",
+    "q22": {
+        "text": "What role do internships or co-op experiences play in your educational and career plans?",
+        "options": [
+            "Helpful but not necessary",
+            "Essential",
+            "Not considered",
+            "Not Answered"
+        ],
+        "importance": 0.007238698190438431
+    },
+    "q30": {
+        "text": "Are there any specific skills you wish to develop further before graduating?",
+        "options": [
+            "Technical skills",
+            "Soft skills (communication, teamwork)",
+            "Time management",
+            "Not Answered"
+        ],
+        "importance": 0.06489792685096307
+    },
+    "q31": {
+        "text": "Have you been involved in any collaborative projects with students from different academic backgrounds?",
         "options": [
             "Yes",
             "No",
@@ -28,45 +47,14 @@
         ],
         "importance": 0.0
     },
-    "q16": {
-        "text": "What influenced your decision to study engineering?",
+    "q37": {
+        "text": "Are you involved in any leadership roles or student organizations related to your field?",
         "options": [
-            "Family expectations",
-            "Desire for knowledge",
-            "Job opportunities",
+            "No",
+            "Yes",
             "Not Answered"
         ],
-        "importance": 0.0
-    },
-    "q17": {
-        "text": "What part of engineering are you most excited about?",
-        "options": [
-            "Making useful stuff",
-            "Thinking up new ideas",
-            "Learning new things",
-            "Not Answered"
-        ],
-        "importance": 0.0
-    },
-    "q20": {
-        "text": "How do you think you'll use what you learn in engineering to help fix things in the real world?",
-        "options": [
-            "Making people healthier",
-            "Creating new inventions",
-            "Helping nature",
-            "Not Answered"
-        ],
-        "importance": 0.01685707695424221
-    },
-    "q48": {
-        "text": "How do you cope with stress?",
-        "options": [
-            "Talking to friends/family",
-            "Ignoring it",
-            "Exercise",
-            "Not Answered"
-        ],
-        "importance": 0.0
+        "importance": 0.059206731270495805
     },
     "q51": {
         "text": "Have you ever felt like you don't belong or aren't good enough in your engineering studies?",
@@ -96,24 +84,14 @@
         ],
         "importance": 0.08308653627130869
     },
-    "q66": {
-        "text": " How important is taking care of yourself to you every day?",
+    "q65": {
+        "text": "Do you do anything the same way every day or on a regular basis?",
         "options": [
-            "Very important",
-            "Sometimes important",
-            "Not very important",
+            "Yes",
+            "No",
             "Not Answered"
         ],
         "importance": 0.0
-    },
-    "q67": {
-        "text": " Do you do anything to help yourself feel good mentally?",
-        "options": [
-            "No",
-            "Yes",
-            "Not Answered"
-        ],
-        "importance": 0.010729164696243743
     },
     "q68": {
         "text": "How often do you feel like college stuff is too much for you?",
@@ -125,16 +103,16 @@
         ],
         "importance": 0.04735190252638577
     },
-    "q72": {
-        "text": " How often do you do things to help yourself relax when you're stressed?",
+    "q73": {
+        "text": "Have you talked to friends or classmates for support with your feelings lately?",
         "options": [
-            "A few times a week",
-            "Every day",
+            "Hardly ever",
+            "Yes, a lot",
             "Sometimes",
-            "Rarely or never",
+            "Never",
             "Not Answered"
         ],
-        "importance": 0.014737280199438318
+        "importance": 0.030963182352805152
     },
     "q75": {
         "text": "Do you set specific goals related to your mental well-being?",
@@ -146,5 +124,25 @@
             "Not Answered"
         ],
         "importance": 0.0013896064261111896
+    },
+    "q77": {
+        "text": " How do you like to spend your free time reading?",
+        "options": [
+            "Both fiction and non-fiction books",
+            "I don't enjoy reading",
+            "Non-fiction books",
+            "Fiction books",
+            "Not Answered"
+        ],
+        "importance": 0.06415363357166637
+    },
+    "q78": {
+        "text": "Do you have any special skills or interests outside of studying?",
+        "options": [
+            "No",
+            "Yes",
+            "Not Answered"
+        ],
+        "importance": 0.04417649947652791
     }
 }
